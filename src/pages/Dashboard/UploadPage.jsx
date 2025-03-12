@@ -60,11 +60,14 @@ const UploadPage = () => {
     });
 
     try {
-      const response = await fetch("http://localhost:5000/api/upload", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: uploadData, // ✅ Ensuring data is sent as JSON
-      });
+      const response = await fetch(
+        "https://safaimitra-backend.onrender.com/api/upload",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: uploadData, // ✅ Ensuring data is sent as JSON
+        }
+      );
 
       if (response.ok) {
         alert("Upload successful!");

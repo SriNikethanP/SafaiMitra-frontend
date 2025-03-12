@@ -44,7 +44,7 @@ const PickupBox = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/order/create-order",
+        "https://safaimitra-backend.onrender.com/api/order/create-order",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

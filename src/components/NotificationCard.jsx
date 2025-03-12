@@ -6,7 +6,9 @@ const PickupNotificationCard = () => {
   useEffect(() => {
     const fetchPickups = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/uploads");
+        const response = await fetch(
+          "https://safaimitra-backend.onrender.com/api/uploads"
+        );
         const data = await response.json();
 
         if (response.ok) {
